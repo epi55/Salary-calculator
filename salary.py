@@ -7,7 +7,7 @@ def varEngine(annual, tma):
     print("# Biweekly (net): ${:.2f}\n###############".format(biweeklyNet))
 
 # RUN
-annual = 100665.30
-tma = 254.66
+annual = 0
+tma = 0
 net = 0.655
 varEngine(annual, tma)
