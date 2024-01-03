@@ -9,18 +9,17 @@ def salaryEngine(data, id, tma, rate, net):
     annual = data[id][0]
     annualTMA = biweeklyTMA * 26
     annualNet = annualTMA * net
-    biweeklyNet = biweekly * net
+    biweeklyNet = biweeklyTMA * net
     print("\n")
     print("# {} + {}%".format(id, rate))
-    print("Biweekly + TMA: ${:.2f}".format(biweeklyTMA))
-    print("Annual + TMA: ${:.2f}".format(annualTMA))
-    print("Biweekly + TMA + Net: ${:.2f}".format(biweeklyNet))
-    print("Annual + TMA + Net: ${:.2f}".format(annualNet))
+    print("Biweekly: ${:.2f}".format(biweeklyTMA))
+    print("Annual: ${:.2f}".format(annualTMA))
+    print("Biweekly + Net: ${:.2f}".format(biweeklyNet))
+    print("Annual + Net: ${:.2f}".format(annualNet))
 
 # RUN
 id = "27" # 21 / 24 / 27/ 30
 rate = "3" # 0 / 3 / 6 / 9
 net = (0.655)
 salaryEngine(data, id, tma, rate, net)
-salaryEngine(data, "27", tma, "9", net)
-salaryEngine(data, "30", tma, "9", net)
+salaryEngine(data, "27", tma, "6", net)
